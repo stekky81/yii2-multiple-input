@@ -1,6 +1,6 @@
 <?php
 
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use unclead\multipleinput\TabularInput;
 use yii\helpers\Html;
 use unclead\multipleinput\examples\models\Item;
@@ -11,7 +11,7 @@ use unclead\multipleinput\TabularColumn;
 /* @var $models Item[] */
 ?>
 
-<?php $form = \yii\bootstrap\ActiveForm::begin([
+<?php $form = \yii\bootstrap5\ActiveForm::begin([
     'id' => 'tabular-form',
     'options' => [
         'enctype' => 'multipart/form-data'

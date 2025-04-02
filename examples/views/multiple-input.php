@@ -1,6 +1,6 @@
 <?php
 
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use unclead\multipleinput\MultipleInput;
 use unclead\multipleinput\examples\models\ExampleModel;
 use yii\helpers\Html;
@@ -19,30 +19,30 @@ use kartik\date\DatePicker;
     'validateOnChange'          => false,
     'validateOnSubmit'          => true,
     'validateOnBlur'            => false,
-]);?>
+]); ?>
 
 
 <h3>Single column</h3>
 <?php
-    echo $form->field($model, 'emails')->widget(MultipleInput::className(), [
-        'max'  => 6,
-        'allowEmptyList' => false,
-        'sortable' => true,
-        'columns' => [
-            [
-                'name' => 'emails',
-                'options' => [
-                    'placeholder' => 'E-mail'
-                ]
+echo $form->field($model, 'emails')->widget(MultipleInput::className(), [
+    'max'  => 6,
+    'allowEmptyList' => false,
+    'sortable' => true,
+    'columns' => [
+        [
+            'name' => 'emails',
+            'options' => [
+                'placeholder' => 'E-mail'
             ]
-        ],
-        'min'  => 2, // should be at least 2 rows
-        'addButtonPosition' => [
-            MultipleInput::POS_HEADER,
-            MultipleInput::POS_FOOTER,
-            MultipleInput::POS_ROW
         ]
-    ])
+    ],
+    'min'  => 2, // should be at least 2 rows
+    'addButtonPosition' => [
+        MultipleInput::POS_HEADER,
+        MultipleInput::POS_FOOTER,
+        MultipleInput::POS_ROW
+    ]
+])
     ->label(false);
 ?>
 
@@ -54,7 +54,7 @@ echo $form->field($model, 'schedule')->label(false)->widget(MultipleInput::class
     'sortable' => true,
     'allowEmptyList' => true,
     'showGeneralError' => true,
-    'rowOptions' => function($model) {
+    'rowOptions' => function ($model) {
         $options = [];
 
         if ($model['priority'] > 1) {
@@ -96,7 +96,7 @@ echo $form->field($model, 'schedule')->label(false)->widget(MultipleInput::class
             'name'  => 'day',
             'type'  => DatePicker::className(),
             'title' => 'Day',
-            'value' => function($data) {
+            'value' => function ($data) {
                 return $data['day'];
             },
             'items' => [
@@ -126,7 +126,7 @@ echo $form->field($model, 'schedule')->label(false)->widget(MultipleInput::class
         [
             'name'  => 'comment', // can be ommited in case of static column
             'type'  => MultipleInputColumn::TYPE_STATIC,
-            'value' => function($data) {
+            'value' => function ($data) {
                 return Html::tag('span', 'static content', ['class' => 'label label-info']);
             },
             'headerOptions' => [
@@ -155,8 +155,8 @@ echo $form->field($model, 'schedule')->label(false)->widget(MultipleInput::class
 
 ?>
 
-<?= Html::submitButton('Update', ['class' => 'btn btn-success']);?>
-<?php ActiveForm::end();?>
+<?= Html::submitButton('Update', ['class' => 'btn btn-success']); ?>
+<?php ActiveForm::end(); ?>
 
 
 <?php

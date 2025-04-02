@@ -1,6 +1,6 @@
 <?php
 
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use unclead\multipleinput\MultipleInput;
 use unclead\multipleinput\examples\models\ExampleModel;
 use yii\helpers\Html;
@@ -68,7 +68,7 @@ echo MultipleInput::widget([
 ]);
 ?>
 
-<?= Html::submitButton('Update', ['class' => 'btn btn-success']);?>
+<?= Html::submitButton('Update', ['class' => 'btn btn-success']); ?>
 <?php
 if ($enableActiveForm) {
     ActiveForm::end();

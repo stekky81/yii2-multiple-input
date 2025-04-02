@@ -6,8 +6,8 @@ Widget support the following options that are additionally recognized over and a
 
 **theme** _string_: specify the theme of the widget. Available 2 themes:
 
-* `default` with only widget css classes
-* `bs` \(twitter bootstrap\) theme with additional BS ccs classes\). 
+- `default` with only widget css classes
+- `bs` \(twitter bootstrap5\) theme with additional BS ccs classes\).
 
 Default value is `bs`
 
@@ -47,9 +47,9 @@ Default value is `bs`
 function ($model, $index, $context)
 ```
 
-* `$model`: the current data model being rendered
-* `$index`: the zero-based index of the data model in the model array
-* `$context`: the widget object
+- `$model`: the current data model being rendered
+- `$index`: the zero-based index of the data model in the model array
+- `$context`: the widget object
 
 **sortable** _bool_: whether need to enable sorting or not
 
@@ -61,16 +61,16 @@ function ($model, $index, $context)
 function ($model, $index, $context)
 ```
 
-* `$model`: the current data model being rendered
-* `$index`: the zero-based index of the data model in the model array
-* `$context`: the MultipleInput widget object
+- `$model`: the current data model being rendered
+- `$index`: the zero-based index of the data model in the model array
+- `$context`: the MultipleInput widget object
 
 **layoutConfig** _array_: CSS grid classes for horizontal layout \(only supported for `ListRenderer` class\). This must be an array with these keys:
 
-* `'offsetClass'`: the offset grid class to append to the wrapper if no label is rendered
-* `'labelClass'`: the label grid class
-* `'wrapperClass'`: the wrapper grid class
-* `'errorClass'`: the error grid class
+- `'offsetClass'`: the offset grid class to append to the wrapper if no label is rendered
+- `'labelClass'`: the label grid class
+- `'wrapperClass'`: the wrapper grid class
+- `'errorClass'`: the error grid class
 
 **showGeneralError** _bool_: whether need to show error message for main attribute, when you don't want to validate particular input and want to validate a filed in general.
 
@@ -114,17 +114,19 @@ function($data) {}
 
 **attributeOptions** _array_: client-side options of the attribute, e.g. enableAjaxValidation. You can use this property for custom configuration of the column (attribute). By default, the column will use options which are defined on widget level.
 
-_Supported versions >= 2.1.0
+\_Supported versions >= 2.1.0
 
-**columnOptions** _array|\Closure_: the HTML attributes for the indivdual table body column. This can be either an array specifying the common HTML attributes for indivdual body column, or an anonymous function that returns an array of the HTML attributes. 
+**columnOptions** _array|\Closure_: the HTML attributes for the indivdual table body column. This can be either an array specifying the common HTML attributes for indivdual body column, or an anonymous function that returns an array of the HTML attributes.
 
 It should have the following signature:
+
 ```php
 function ($model, $index, $context)
 ```
-* `$model`: the current data model being rendered
-* `$index`: the zero-based index of the data model in the model array
-* `$context`: the widget object
+
+- `$model`: the current data model being rendered
+- `$index`: the zero-based index of the data model in the model array
+- `$context`: the widget object
 
 _Supported versions >= 2.18.0_
 
@@ -138,14 +140,14 @@ _Supported versions >= 2.18.0_
 
 Each column in a row can has their own type. Widget supports:
 
-* all yii2 html input types:
-  * `textInput`
-  * `dropDownList`
-  * `radioList`
-  * `textarea`
-  * For more detail look at [Html helper class](http://www.yiiframework.com/doc-2.0/yii-helpers-html.html)
-* input widget \(widget that extends from `InputWidget` class\). For example, `yii\widgets\MaskedInput`
-* `static` to output a static HTML content
+- all yii2 html input types:
+  - `textInput`
+  - `dropDownList`
+  - `radioList`
+  - `textarea`
+  - For more detail look at [Html helper class](http://www.yiiframework.com/doc-2.0/yii-helpers-html.html)
+- input widget \(widget that extends from `InputWidget` class\). For example, `yii\widgets\MaskedInput`
+- `static` to output a static HTML content
 
 For using widget as column input you may use the following code:
 
@@ -166,4 +168,3 @@ echo $form->field($model, 'phones')->widget(MultipleInput::className(), [
     ],
 ])->label(false);
 ```
-

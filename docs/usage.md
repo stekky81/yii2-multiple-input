@@ -24,7 +24,7 @@ class ExampleModel extends Model
 Then we have to use `MultipleInput` widget for rendering form field in the view file
 
 ```php
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use unclead\multipleinput\MultipleInput;
 use unclead\multipleinput\examples\models\ExampleModel;
 use yii\helpers\Html;
@@ -116,7 +116,7 @@ class ExampleModel extends Model
 Then we have to use `MultipleInput` widget for rendering form field in the view file
 
 ```php
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use unclead\multipleinput\MultipleInput;
 use unclead\multipleinput\examples\models\ExampleModel;
 use yii\helpers\Html;
@@ -197,7 +197,7 @@ For validation of the schedule you can use the following code
     }
 ```
 
-For example, you keep some data in json format in an attribute of a model. Imagine that it is an abstract user schedule with keys: user\_id, day, priority
+For example, you keep some data in json format in an attribute of a model. Imagine that it is an abstract user schedule with keys: user_id, day, priority
 
 On the edit page, you want to be able to manage this schedule and you can you yii2-multiple-input widget like in the following code
 
@@ -324,7 +324,7 @@ Since version **2.18.0** you can configure `columnOptions` also.
 ```php
 <?php
 
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use unclead\multipleinput\TabularInput;
 use yii\helpers\Html;
 use \unclead\multipleinput\examples\models\Item;
@@ -333,7 +333,7 @@ use \unclead\multipleinput\examples\models\Item;
 /* @var $models Item[] */
 ?>
 
-<?php $form = \yii\bootstrap\ActiveForm::begin([
+<?php $form = \yii\bootstrap5\ActiveForm::begin([
     'id'                        => 'tabular-form',
     'enableAjaxValidation'      => true,
     'enableClientValidation'    => false,
@@ -436,4 +436,3 @@ class TabularInputAction extends Action
     }
 }
 ```
-

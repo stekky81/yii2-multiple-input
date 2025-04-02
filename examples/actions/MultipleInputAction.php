@@ -4,7 +4,7 @@ namespace unclead\multipleinput\examples\actions;
 
 use Yii;
 use yii\base\Action;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use yii\web\Response;
 use unclead\multipleinput\examples\models\ExampleModel;
 
@@ -33,7 +33,7 @@ class MultipleInputAction extends Action
                 Yii::error('Validation errors: ' . print_r($model->getErrors(), true));
             }
         }
-        
+
         return $this->controller->render('@unclead-examples/views/multiple-input.php', ['model' => $model]);
     }
 }

@@ -12,7 +12,7 @@ use Yii;
 use unclead\multipleinput\examples\models\Item;
 use yii\base\Action;
 use yii\base\Model;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\ActiveForm;
 use yii\web\Response;
 
 /**
