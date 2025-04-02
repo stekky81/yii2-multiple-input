@@ -219,7 +219,7 @@ abstract class BaseRenderer extends BaseObject implements RendererInterface
         }
 
         if (!class_exists($this->columnClass)) {
-            throw new InvalidConfigException('Column class "' . $this->columnClass. '" does not exist');
+            throw new InvalidConfigException('Column class "' . $this->columnClass . '" does not exist');
         }
     }
 
@@ -283,7 +283,7 @@ abstract class BaseRenderer extends BaseObject implements RendererInterface
         }
 
         if (!array_key_exists('class', $this->addButtonOptions)) {
-            $this->addButtonOptions['class'] = $this->isBootstrapTheme() ? 'btn btn-default' : '';
+            $this->addButtonOptions['class'] = $this->isBootstrapTheme() ? 'btn btn-success' : '';
         }
 
         if (!array_key_exists('label', $this->addButtonOptions)) {
@@ -363,7 +363,7 @@ abstract class BaseRenderer extends BaseObject implements RendererInterface
         MultipleInputAsset::register($view);
 
         // Collect all js scripts which were added before rendering of our widget
-        $jsBefore= [];
+        $jsBefore = [];
         if (is_array($view->js)) {
             foreach ($view->js as $position => $scripts) {
                 foreach ((array)$scripts as $key => $js) {
@@ -563,7 +563,8 @@ abstract class BaseRenderer extends BaseObject implements RendererInterface
      *
      * @throws InvalidConfigException
      */
-    protected function getIconClass($action) {
+    protected function getIconClass($action)
+    {
         if (in_array($action, ['add', 'remove', 'clone', 'drag-handle'])) {
             return $this->iconMap[$action];
         }

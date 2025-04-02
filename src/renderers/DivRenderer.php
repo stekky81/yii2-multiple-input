@@ -380,11 +380,13 @@ class DivRenderer extends BaseRenderer
      */
     protected function getJsSortableOptions()
     {
-        return ArrayHelper::merge(parent::getJsSortableOptions(),
+        return ArrayHelper::merge(
+            parent::getJsSortableOptions(),
             [
                 'containerSelector' => '.list-renderer',
                 'itemPath' => new UnsetArrayValue,
                 'itemSelector' => '.multiple-input-list__item',
-            ]);
+            ]
+        );
     }
 }
